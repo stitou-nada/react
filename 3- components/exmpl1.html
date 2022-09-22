@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+      class Footer extends React.Component{
+         render(){
+            return(
+                <h1> footer </h1>
+            )
+         }
+        }
+        ReactDOM.render(<Footer />, document.getElementById("root"));
+
+    </script>
+</body>
+</html>
