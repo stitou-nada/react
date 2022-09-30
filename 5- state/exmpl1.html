@@ -10,20 +10,21 @@
 <body>
     <div id="root"></div>
     <script type="text/babel">
-        class App extends React.Component{
-    state = {
-            name : 'nada',
-            age : 21
-    }
-    render(){
-        return(
-            <div>
-                <p> {this.state.name} </p>
-                <p> {this.state.age} </p>
+       class App extends React.Component{
+           state={
+               name:"nada",
+               age:"21"
+            }
+        render(){
+               return(
+                <div>
+                <h1>{this.state.name}</h1>
+                <h1>{this.state.age}</h1>
             </div>
-        )
-    }
-}
+            )
+        }
+        
+       }
 ReactDOM.render(<App />, document.getElementById('root'));
     </script>
 </body>

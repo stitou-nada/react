@@ -10,24 +10,22 @@
     <script type="text/babel">
 
    class App extends React.Component{
-      
-    render(){
-
-        return(
-           <div><Produit  prix='100dh' name='maskara' /></div>
-        )
-    }
-
-   }
-   class Produit extends React.Component{
     render(){
       return(
-        <div> 
-          <h1>{this.props.prix}</h1>
-          <h2>{this.props.name}</h2>
-        </div>  
+        <div>
+          <Persone  name="nada"  age="21" />
+          </div>
       )
-
+    }
+   }
+   class Persone extends React.Component{
+    render(){
+      return(
+        <div>
+          <h1>{this.props.name}</h1>
+          <h1>{this.props.age}</h1>
+          </div>
+      )
     }
    }
 
