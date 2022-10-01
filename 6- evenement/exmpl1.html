@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html >
+
 <head>
     <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
+
 <body>
-    <div id="root"></div>
-   <script type="text/babel">
-        class Student extends React.Component{
+    <script type="text/babel">
+        class App extends React.Component{
+            handleClick(){
+                console.log("clicked")
+            }
             render(){
                 return(
-                    <h1>dev</h1>
-                )
+                    <div className="App">
+                        <button onClick={this.handleClick}> Click</button>
+                        
+                        </div>
+                );
             }
         }
-        ReactDOM.render(<Student />, document.getElementById("root"));
-   </script>
-     
 
+    </script>
 </body>
 </html>

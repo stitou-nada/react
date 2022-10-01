@@ -9,31 +9,31 @@
     <div id="root"></div>
     <script type="text/babel">
       
-      class App extends React.Component {
-            render(){
-                return(
-                    <div>
-                        <h1> <Header /> </h1> 
-                        <h1> <Footer /> </h1> 
+     class App extends React.Component{
+        render(){
+            return(
+                <div>
+                    <h1><Header /></h1>
+                    <h1><Footer /></h1>
                     </div>
-                )
-            }
-      }
-      class Header extends React.Component {
-            render(){
-                return(
-                    <h1>header</h1>
-                )
-            }
-      }
-      class Footer extends React.Component {
-            render(){
-                return(
-                    <h1>footer</h1>
-                )
-            }
-      }
-     ReactDOM.render(<App />, document.getElementById("root"));
+            )
+        }
+     }
+     class Header extends React.Component{
+        render(){
+            return(
+                <h1>stagiaire 1</h1>
+            )
+        }
+     }
+     class Footer extends React.Component{
+        render(){
+            return(
+                <h1>stagiaire 2 </h1>
+            )
+        }
+     }
+     ReactDOM.render(<App />,document.getElementById("root"));
     </script>
 </body>
 </html>

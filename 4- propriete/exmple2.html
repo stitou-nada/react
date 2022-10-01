@@ -11,38 +11,29 @@
     <div id="root"></div>
     <script type="text/babel">
         class App extends React.Component{
-      
-           render(){
-  
-              return(
-                   <div> 
-                <Produit prix='50dh'  />
-                <Materiel  prenom='koka' />
-                    </div>
-             )
-      }
-  
-     }
-        class Produit extends React.Component{
-      
-           render(){
-  
-              return(
-                   <h2>produit {this.props.prix}</h2>
-             )
-      }
-  
-     }
+         render(){
+            return(
+               <div>
+                  <Produits prix ="85 DH" />
+                  <Materiel name="noir" />
+                  </div>
+            )
+         }
+        }
+        class Produits extends React.Component{
+         render(){
+            return(
+               <h1>Mascara {this.props.prix}</h1>
+            )
+         }
+        }
         class Materiel extends React.Component{
-      
-           render(){
-  
-              return(
-                <h2>materiel {this.props.prenom}</h2>
-             )
-      }
-  
-     }
+         render(){
+            return(
+               <h1>Essence {this.props.name}</h1>
+            )
+         }
+        }
      ReactDOM.render(<App />, document.getElementById('root'));
     </script>
 </body>
