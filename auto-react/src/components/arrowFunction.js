@@ -13,7 +13,12 @@ class Fuction extends React.Component {
     }
     render() {
         return ( 
-            <div >hello {this.Num()} </div>
+            <div >hello {this.Num()}
+            <h1> {this.props.nam} </h1>
+            <h1> {this.props.title} </h1>
+
+            </div>
+            
         )
     }
 }

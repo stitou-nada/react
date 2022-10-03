@@ -12,7 +12,7 @@ render(){
   
   return(
 
-    <h1> <Fuction/> </h1>
+    <h1> <Fuction nam="mliki" title="react" /> </h1>
   )
 }
 }
