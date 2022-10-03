@@ -8,11 +8,17 @@ import Hello from "./components/arrowFunction";
 import Fuction from "./components/arrowFunction";
 
 class App extends React.Component{
+
+  state = {
+    namee :"cc butaina"
+  }
 render(){
   
   return(
-
-    <h1> <Fuction nam="mliki" title="react" /> </h1>
+   <div>
+    <h1> <Fuction nam="mliki" title="react"  hixam={this.state.namee} /> </h1>
+    <h1>   </h1>
+    </div>
   )
 }
 }

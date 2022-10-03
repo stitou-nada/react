@@ -8,7 +8,8 @@ class Fuction extends React.Component {
         name: "hixam"
     }
     Num =()=>{
-        return this.state.name
+     const  variabl = this.state.name
+       return variabl
 
     }
     render() {
@@ -16,6 +17,7 @@ class Fuction extends React.Component {
             <div >hello {this.Num()}
             <h1> {this.props.nam} </h1>
             <h1> {this.props.title} </h1>
+            <h1> {this.props.hixam} </h1>
 
             </div>
             
