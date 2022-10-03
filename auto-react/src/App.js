@@ -3,17 +3,14 @@ import Footer from "./components/footer";
 import Table from "./components/table";
 import { num  as number} from "./components/students";
 import { num } from "./components/student2";
+import Cars from "./components/cars";
 
 class App extends React.Component{
 render(){
-  console.log(number)
+  
   return(
 
-    <div>
-      
-      <h1>{number[1].stagiaire4}</h1>
-      <h1> {num[1]}</h1>
-    </div>
+    <h1> <Cars /> </h1>
   )
 }
 }
