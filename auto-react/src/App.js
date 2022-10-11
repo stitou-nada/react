@@ -6,18 +6,16 @@ import { num } from "./components/student2";
 import Cars from "./components/cars";
 import Hello from "./components/arrowFunction";
 import Fuction from "./components/arrowFunction";
+import Stagiaire from "./components/event2";
 
 class App extends React.Component{
 
-  state = {
-    namee :"cc butaina"
-  }
+ 
 render(){
   
   return(
    <div>
-    <h1> <Fuction nam="mliki" title="react"  hixam={this.state.namee} /> </h1>
-    <h1>   </h1>
+    <p><Stagiaire /></p>
     </div>
   )
 }
