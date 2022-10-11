@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import React from "react";
+
+const cars =["mersidic","dacia"];
+
+export {cars} ;
+=======
 // Nested Component
 import React from "react";
 
@@ -20,3 +27,4 @@ class Cars extends React.Component{
 }
 
 export default Cars ;
+>>>>>>> fdd8202f5c0ffa47948ff77309d2f06eec09a7e2
