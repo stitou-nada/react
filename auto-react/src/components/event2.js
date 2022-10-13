@@ -10,7 +10,13 @@ class Stagiaire extends React.Component{
     name = ()=> 'Cars name : ';
     state ={
         car1 : carss[0],
-        car2 : carss[1]
+        car2 : carss[1],
+        car3 : 'nada'
+    }
+    changeState = ()=>{
+        this.setState({
+            car3 :'butaina',
+        })
     }
 
     render(){
@@ -20,7 +26,9 @@ class Stagiaire extends React.Component{
                 <h1>{this.name()}</h1>
                 <h2>{this.state.car1}</h2>
                 <h2>{this.state.car2}</h2>
+                <h2>{this.state.car3}</h2>
                 <button onClick={this.btn} >Click</button>
+                <button onClick={this.changeState} >change state</button>
             </div>
         )
     }
