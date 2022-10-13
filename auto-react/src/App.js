@@ -8,16 +8,21 @@ import Cars from "./components/cars";
 import Hello from "./components/arrowFunction";
 import Fuction from "./components/arrowFunction";
 import Stagiaire from "./components/event2";
+import Persone from "./components/loop";
 
 class App extends React.Component{
 
-  
+  state ={
+    persons :[
+      {id:1, name:'nada' , age:21},
+      {id:2, name:'hicham' , age:21}
+    ]
+  }
 render(){
   
   return(
    <div>
-   <h2><Stagiaire /></h2>
-
+         <Persone data={this.state.persons} />
     </div>
   )
 }
