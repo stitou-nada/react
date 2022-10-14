@@ -10,20 +10,37 @@ import Fuction from "./components/arrowFunction";
 import Stagiaire from "./components/event2";
 import Persone from "./components/loop";
 
+
 class App extends React.Component{
 
-  state ={
-    persons :[
-      {id:1, name:'nada' , age:21},
-      {id:2, name:'hicham' , age:21}
-    ]
+  // state ={
+  //   persons :[
+  //     {id:1, name:'nada' , age:21},
+  //     {id:2, name:'hicham' , age:21}
+  //   ]
+  // }
+  state={
+    input :"",
   }
+  AutoShow =(input)=>{
+    this.setState({input: input.target.value,
+    })
+} 
 render(){
   
   return(
    <div>
-         <Persone data={this.state.persons} />
+        
+         <div>
+         <h1>Form input</h1>
+          <p>{this.state.input}</p>
+         <form>
+          <input type="text" onChange={this.AutoShow} />
+         
+         </form>
     </div>
+    </div>
+        
   )
 }
 }
