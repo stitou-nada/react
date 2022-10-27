@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+       function App(props){
+        return (
+              <h1>heelo {props.name} </h1>
+        )
+       }
+       function Header(){
+        const array=[
+            {name:'test1'},
+            {name:'test2'},
+            {name:'test3'},
+        ]
+        return(
+            <div>
+                
+                {array.map((value)=> <App name={value.name} /> 
+                )}
+                </div>
+        )
+       }
+       ReactDOM.render(<Header />,document.getElementById('root'))
+    </script>
+</body>
+</html>
