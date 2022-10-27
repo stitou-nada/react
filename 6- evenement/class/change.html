@@ -10,13 +10,14 @@
 <body>
     <script type="text/babel">
         class App extends React.Component{
-            handleClick(){
-                alert("clicked")
+            handleClick(e){
+               console.log(e.target.value)
             }
             render(){
                 return(
-                    <div className="App">
-                        <button onClick={this.handleClick}> Click</button>
+                    <div >
+                        <h1>add name</h1>
+                        <input onChange={this.handleClick}></input>
                         
                         </div>
                 );
