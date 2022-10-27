@@ -7,18 +7,16 @@
 </head>
 <body>
     <div id="root"></div>
-    <script type="text/babel">
-
-   
-    function App(){
-         return (  
-         <div>
-               <h1> App Component</h1>
-            </div>
-         )
-}
-ReactDOM.render(<App />,document.getElementById('root'));
-    </script>
+   <script type="text/babel">
+        class Student extends React.Component{
+            render(){
+                return(
+                    <h1>devlopment web</h1>
+                )
+            }
+        }
+        ReactDOM.render(<Student />, document.getElementById("root"));
+   </script>
      
 
 </body>
