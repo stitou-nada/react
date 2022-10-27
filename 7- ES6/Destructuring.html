@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <link rel="stylesheet" href="../asset/css/style.css">
+</head>
+<body>
+    <h1 id="des" >Exmple 1</h1>
+    <script>
+        // exmple 1
+        
+        function calculate(a, b) {
+          const add = a + b;
+          const subtract = a - b;
+          const multiply = a * b;
+          const divide = a / b;
+        
+          return [add, subtract, multiply, divide];
+        }
+        
+        const [add, subtract, multiply, divide] = calculate(4, 7);
+        
+        document.write("<p>Sum: " + add + "</p>");
+        document.write("<p>Difference " + subtract + "</p>");
+        document.write("<p>Product: " + multiply + "</p>");
+        document.write("<p>Quotient " + divide + "</p>");
+        </script>  
+         <h1 id="des" >Exmple 2</h1> 
+         <div id="demo" ></div>
+         <script>
+            const vehicleOne = {
+              brand: 'Ford',
+              model: 'Mustang',
+              type: 'car',
+              year: 2021, 
+              color: 'red'
+            }
+            
+            myVehicle(vehicleOne);
+            
+            function myVehicle({type, color, brand, model}) {
+              const message = 'My ' + type + ' is a ' + color + ' ' + brand + ' ' + model + '.';
+            
+              document.getElementById("demo").innerHTML = message;
+            }
+            </script>
+</body>
+</html>
