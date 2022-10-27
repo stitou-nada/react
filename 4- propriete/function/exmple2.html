@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="root" ></div>
+    <script type="text/babel">
+         function App(param){
+            return (
+                <div>
+                    <h1> I am {param.name}  {param.prenom}</h1>
+
+                    <h1>  {param.age} year old</h1>
+                    </div>
+            )
+         }
+         function Student(){
+            return (
+                <div>
+                   <App  name="nada" prenom="stitou" age="21" />
+                   
+                    </div>
+            )
+         }
+         ReactDOM.render(<Student />, document.getElementById("root"));
+    </script>
+</body>
+</html>

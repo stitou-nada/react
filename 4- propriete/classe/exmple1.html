@@ -9,25 +9,26 @@
     <div id="root"></div>
     <script type="text/babel">
 
-   class App extends React.Component{
+  class App extends React.Compenant{
     render(){
-      return(
+      return (
         <div>
-          <Persone  name="nada"  age="21" />
+          <Student  name='nada' prenom='stitou' age='21' />
           </div>
-      )
+      )     
     }
-   }
-   class Persone extends React.Component{
+  }
+  class Student extends React.Component{
     render(){
       return(
         <div>
           <h1>{this.props.name}</h1>
+          <h1>{this.props.prenom}</h1>
           <h1>{this.props.age}</h1>
           </div>
       )
     }
-   }
+  }
 
    ReactDOM.render(<App />, document.getElementById("root"));
 
