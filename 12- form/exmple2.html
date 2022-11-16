@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>form</title>
+</head>
+<body>
+   <div id="root"></div> 
+    <script type="text/babel">
+         const { useState } = React
+     function Myform(){
+        const [ShowColor , setColor] = useState("nada");
+
+         const changeColor =(input) =>{
+               setColor(input.target.value)
+         }
+        return(
+
+            <div>
+            <form >
+                
+             entrer your color : <input type="text" onChange={changeColor}></input>
+             <p>{ShowColor}</p>
+                </form>
+        </div>
+        )
+     }
+     ReactDOM.render(<Myform />, document.getElementById('root'));
+
+    </script>
+</body>
+</html>
