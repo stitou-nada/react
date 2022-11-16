@@ -33,13 +33,14 @@
                     // console.log(this.state.name)
                 }
                 render(){
+                    console.log(this.state )
                     return(
                         <div>
                         <form>
                            Enter your name :<input type="text" onChange={this.handleChange} ></input>
                            <button onClick={this.handleClick}>click</button>
                            </form>
-                           <h1>{this.state.data} </h1>
+                           <h1>{this.state.name} </h1>
                         </div>
                     )
                 }
