@@ -1,14 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-import CounterButton from './component';
+import { useState, useCallback } from "react";
+import ReactDOM from "react-dom/client";
+import Todos from "./component/todos";
 
-function App() {
+const App = () => {
+
+  const [count, setCount] = useState(0);
+  const [todos, setTodos] = useState([]);
+
+  const increment = () => {
+    setCount((c) => c + 1);
+  };
+  const addTodo = useCallback(() => {
+    setTodos((t) => [...t, "New Todo"]);
+  }, [todos]);
+  console.log("count render");
+
   return (
-    <div className="App">
-      
-      <CounterButton />
-    </div>
+    <>
+      <Todos todos={todos} addTodo={addTodo} />
+      <hr />
+      <div>
+        Count: {count}
+        <button onClick={increment}>+</button>
+      </div>
+    </>
   );
-}
-
+};
 export default App;
