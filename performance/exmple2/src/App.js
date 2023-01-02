@@ -1,31 +1,29 @@
-
-import logo from './logo.svg';
+import { useState , useMemo, useCallback} from 'react';
 import React from 'react';
-import './App.css';
-
+import ViewCounter from './components/ViewCounter';
+import ViewText from './components/ViewText';
 function App() {
-  const [CountA, setCountA] = React.useState(0);
-  const [CountB, setCountB] = React.useState(0);
+const [count, setCount] = useState(0);
+const name= useMemo (()=>{
+    
+    return{name:"karem"};
+},[]) ;
 
-  return (
-    <div>
-      <Count name="A" value={CountA} />
-      <Count name="B" value={CountB} />
-      <button onClick={() => {console.log("Click button");setCountA(CountA + 1);}}>
-        Increment counter A
-      </button>
-    </div>
-  );
+
+
+const counterHandler = () => {
+    setCount((prev) => prev + 1);
+};
+const ageHandler = useCallback(()=>
+{console.log("age");
+},[]); 
+
+
+return (
+<div className='App'>
+<ViewCounter num={count} increaseCount={counterHandler} />
+<ViewText  text={name} addAge={ageHandler} />
+</div>
+);
 }
-const Count = React.memo(function Count({ name, value }) {
-  console.log(`Rendering Count ${name}`);
-  return (
-    <div>
-      {name}: {value}
-    </div>
-  );
-});
-
-
-
 export default App;
